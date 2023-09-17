@@ -1,0 +1,31 @@
+.display { 
+    margin: 6px;
+    font-size: larger;
+}
+/*for mobile*/
+@media only screen and (max-width: 688px){
+    .display .tablet {
+        display: none;
+    }
+    .display .pc {
+        display: none;
+    }
+}
+/*for tablet*/
+@media only screen and (min-width: 689px) and (max-width: 1311px){
+    .display .mobile {
+        display: none;
+    }
+    .display .pc {
+        display: none;
+    }  
+}
+/* for pc */
+@media only screen and (min-width: 1312px) {  
+    .display .mobile {
+        display: none;
+    }
+    .display .tablet {
+        display: none;
+    }
+}

@@ -1,0 +1,61 @@
+@use 'variable';
+@use 'mixins';
+
+* {
+    margin: variable.$margin;
+    padding: variable.$padding;
+    box-sizing: variable.$box-sizing;
+}
+.container{
+    padding: variable.$padding-container;
+    display: variable.$display;
+    grid-template-columns: variable.$gridTcolumns;
+    grid-template-rows: variable.$gridTrows;
+    gap: variable.$gap;
+    place-items: variable.$place-items;
+    .triangle-left{
+        @include mixins.size(0,0);
+        @include mixins.theborder(0,variable.$solid variable.$blue,variable.$border,variable.$border);
+    }
+    .triangle-up{
+        @include mixins.size(0,0);
+        @include mixins.theborder(variable.$border,variable.$border,variable.$solid variable.$orange,0);
+    }
+    .triangle-down{
+        @include mixins.size(0,0);
+        @include mixins.theborder(variable.$border,variable.$border,0,variable.$solid variable.$red);
+    }
+    .triangle-right {
+        @include mixins.size(0,0);
+        @include mixins.theborder(variable.$solid variable.$green,0,variable.$border,variable.$border);
+    }
+    .ellipse-horizontal {
+        @include mixins.size(90px,180px);
+        border-radius: variable.$radius;
+    }
+    .ellipse-vertical {
+        @include mixins.size(180px,90px);
+        border-radius: variable.$radius;
+    }
+    .rectangle-horizontal {
+        @include mixins.size(80px,120px);
+    }
+    .rectangle-vertical {
+        width: 80px;
+        height: 120px;
+        @include mixins.size(120px,80px);
+    }
+}
+
+.orange{
+    @include mixins.bgcolor(variable.$orange);
+}
+.red{
+    @include mixins.bgcolor(variable.$red);
+}
+.blue{
+    @include mixins.bgcolor(variable.$blue);
+}
+.green{
+    @include mixins.bgcolor(variable.$green);
+}

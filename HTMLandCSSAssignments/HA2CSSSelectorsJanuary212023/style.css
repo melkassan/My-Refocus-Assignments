@@ -1,0 +1,27 @@
+* {
+  color: gray;
+}
+
+.red {
+  color: red;
+}
+
+#blue {
+  color: blue;
+}
+
+p {
+  color: var(--p-color);
+}
+.h1 {
+  color: red;
+}
+#text2 {
+  color: blue;
+}
+h2 {
+  color: gray;
+}
+:root {
+  --p-color : purple;
+}

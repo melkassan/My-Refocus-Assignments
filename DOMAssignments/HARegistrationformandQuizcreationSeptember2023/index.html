@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HA Registration Form and Quiz Creation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <h1>Registration Form and Quiz Creation</h1>
+    <div id="container">
+      <div id="cont-left">
+        <form name="quiz" id="quiz-form">
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="fname" id="lfname" class="">First Name:</label>
+              <input
+                id="fname"
+                name="fname"
+                class="fname"
+                type="text"
+                onkeyup="display_fname()"
+              />
+              <div id="result-fname" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="mname" id="lmname" class="">Middle Name:</label>
+              <input
+                id="mname"
+                name="mname"
+                class="mname"
+                type="text"
+                onkeyup="display_mname()"
+              />
+              <div id="result-mname" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="lname" id="llname" class="">Last Name:</label>
+              <input
+                id="lname"
+                name="lname"
+                class="lname"
+                type="text"
+                onkeyup="display_lname()"
+              />
+              <div id="result-lname" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="gender" id="lgender" class="">Gender:</label>
+              <input
+                type="radio"
+                name="gender"
+                class="gender"
+                value="male"
+              />male
+              <input
+                type="radio"
+                name="gender"
+                class="gender"
+                value="female"
+              />female
+              <input
+                type="radio"
+                name="gender"
+                class="gender"
+                value="other"
+              />other
+              <div id="result-gender" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="bday" id="lbday" class="">Birthdate:</label>
+              <input
+                id="bday"
+                name="bday"
+                class="bday"
+                type="date"
+                onkeyup="display_bday()"
+              />
+              <div id="result-bday" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="email" id="lemail" class="">E-mail:</label>
+              <input
+                id="email"
+                name="email"
+                class="email"
+                type="email"
+                onkeyup="display_email()"
+              />
+              <div id="result-email" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="region" id="lregion" class="">Region:</label>
+              <select id="region" name="region" class="region form-select">
+                <option value="">Select Region</option>
+              </select>
+              <div id="result-region" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="province" id="lprovince" class="">Province:</label>
+              <input
+                id="province"
+                name="province"
+                class="province"
+                type="text"
+                onkeyup="display_province()"
+              />
+              <div id="result-province" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="barangay" id="lbarangay" class="">Barangay:</label>
+              <input
+                id="barangay"
+                name="barangay"
+                class="barangay"
+                type="text"
+                onkeyup="display_barangay()"
+              />
+              <div id="result-barangay" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="street" id="lstreet" class="">Street:</label>
+              <input
+                id="street"
+                name="street"
+                class="street"
+                type="text"
+                onkeyup="display_street()"
+              />
+              <div id="result-street" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="vaccine" id="lvaccine" class=""
+                >Vaccination Brand:</label
+              >
+              <select id="vaccine" name="vaccine" class="vaccine form-select">
+                <option disabled selected value="">Select Vaccine</option>
+              </select>
+              <div id="result-vaccine" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="ddate" id="lddate" class=""
+                >Date of Vaccination(Dose 1):</label
+              >
+              <input id="ddate" name="ddate" class="ddate" type="date" />
+              <div id="result-ddate" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="dsite" id="ldsite" class=""
+                >Vaccination(Dose 1) Site:</label
+              >
+              <input id="dsite" name="dsite" class="dsite" type="text" onkeyup="display_dsite()"/>
+              <div id="result-dsite" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="confirm" id="lconfirm" class=""
+                >Did you already get you second vaccination?:</label
+              >
+              <span>
+                <input
+                  type="radio"
+                  name="confirm"
+                  class="confirm"
+                  value="yes"
+                />yes
+                <input
+                  type="radio"
+                  name="confirm"
+                  class="confirm"
+                  value="no"
+                  checked
+                />no
+              </span>
+              <div id="result-confirm" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="vaaccine2" id="lvaccine2" class=""
+                >Vaccination Brand (Dose 2):</label
+              >
+              <select
+                id="vaccine2"
+                name="vaccine2"
+                class="vaccine2 form-select"
+              >
+                <option disabled selected value="">Select Vaccine</option>
+              </select>
+              <div id="result-vaccine2" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="ddate1" id="lddate1" class=""
+                >Date of Vaccination(Dose 2):</label
+              >
+              <input id="ddate1" name="ddate1" class="ddate1" type="date" />
+              <div id="result-ddate1" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <div>
+              <!-- Enter field for question here -->
+              <label for="dsite1" id="ldsite1" class=""
+                >Vaccination(Dose 2) Site:</label
+              >
+              <input id="dsite1" name="dsite1" class="dsite1" type="text" onkeyup="display_dsite1()"/>
+              <div id="result-dsite1" class="result"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control questions">
+            <div>
+              Question 1: What is the capital of the Philippines? <br />
+              <input id="question1" class="question1" type="text" onkeyup="display_question1()"/>
+              <!-- Enter field for question 1 here -->
+              <div id="result-question1" class="result result-q1"></div>
+              <div id="Success-question1"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control questions">
+            <div>
+              Question 2: What is the value of x? x = 3 + 2*5<br />
+              <!-- Enter options for question 2 here -->
+              <input
+                type="radio"
+                name="question2"
+                class="question2"
+                value="25"
+              />x=25<br />
+              <input
+                type="radio"
+                name="question2"
+                class="question2"
+                value="13"
+              />x=13<br />
+              <input
+                type="radio"
+                name="question2"
+                class="question2"
+                value="18"
+              />x=18<br />
+              <div id="result-question2" class="result result-q2"></div>
+              <div id="Success-question2"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control questions">
+            <div>
+              Question 3: Which of the following birds can fly? Choose 3 correct
+              answers.<br />
+              <!-- Enter options for question 3 here -->
+              <input
+                type="checkbox"
+                name="question3"
+                class="question3"
+                value="Parrot"
+              />Parrot<br />
+              <input
+                type="checkbox"
+                name="question3"
+                class="question3"
+                value="Eagle"
+              />Eagle<br />
+              <input
+                type="checkbox"
+                name="question3"
+                class="question3"
+                value="Penguin"
+              />Penguin<br />
+              <input
+                type="checkbox"
+                name="question3"
+                class="question3"
+                value="Crow"
+              />Crow<br />
+              <div id="result-question3" class="result result-q3"></div>
+              <div id="Success-question3"></div>
+              <br /><br />
+            </div>
+          </div>
+          <div class="form-control">
+            <button type="submit" name="submitBtn" class="btn btn-primary">
+              Submit
+            </button>
+            <button type="reset" name="resetBtn" class="btn btn-primary">
+              Reset
+            </button>
+            <div id="result-subReset" class="result result-submit"></div>
+            <div id="Success-subReset"></div>
+          </div>
+        </form>
+      </div>
+      <div id="cont-right">
+        <h2>Client Information</h2>
+        <div id="ans-fname"></div>
+        <div id="ans-mname"></div>
+        <div id="ans-lname"></div>
+        <div id="ans-gender"></div>
+        <div id="ans-bday"></div>
+        <div id="ans-email"></div>
+        <div id="ans-region"></div>
+        <div id="ans-province"></div>
+        <div id="ans-barangay"></div>
+        <div id="ans-street"></div>
+        <h2>Vaccination Information</h2>
+        <div id="ans-vaccine"></div>
+        <div id="ans-ddate"></div>
+        <div id="ans-dsite"></div>
+        <div id="ans-confirm"></div>
+        <div id="ans-ddate1"></div>
+        <div id="ans-dsite1"></div>
+        <h2>Quiz Information</h2>
+        <div id="ans-question1"></div>
+        <div id="ans-question2"></div>
+        <div id="ans-question3"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="src/script.js"></script>
+  </body>
+</html>

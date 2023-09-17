@@ -1,0 +1,20 @@
+*{
+    color: aquamarine;
+}
+
+.blue {
+    color: blue;
+}
+
+.red{
+    color: red;
+}
+h1.blue {
+  color: purple;
+}
+#box-2 p{
+  color:pink
+}
+body p{
+  color:gray;
+} 

@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .questions {
+    display: none !important;
+  }
+  .result {
+    color: crimson;
+  }
+  #Success-SubReset,
+  #Success-question1,
+  #Success-question2,
+  #Success-question3{
+    color: green;
+  }
+  #container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+   #cont-left{
+    width: 50%;
+  } 
+  #cont-right{
+    height: 1700px;
+    width: 50%;
+    padding: 20px;
+  }
+  

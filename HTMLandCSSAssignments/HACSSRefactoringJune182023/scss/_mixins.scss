@@ -1,0 +1,13 @@
+@mixin size($height, $width){
+    height: $height;
+    width: $width;
+}
+@mixin bgcolor($color){
+    background-color: $color;
+}
+@mixin theborder($left,$right,$bottom,$top){
+    border-top: $top;
+    border-bottom: $bottom;
+    border-left: $left;
+    border-right:$right
+}

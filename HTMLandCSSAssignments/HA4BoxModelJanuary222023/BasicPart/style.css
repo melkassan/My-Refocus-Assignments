@@ -1,0 +1,14 @@
+section.sectionlorem {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid gray;
+  padding: 16px 16px 16px 16px;
+  height: 400px;
+  width: 400px;
+}
+.sectionlorem h1 {
+  margin-bottom: 14px;
+}
+.sectionlorem p {
+  color: red;
+  padding-right: 38px;
+}

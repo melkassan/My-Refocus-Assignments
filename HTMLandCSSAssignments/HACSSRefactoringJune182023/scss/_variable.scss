@@ -1,0 +1,24 @@
+$solid : 100px solid;
+$border : $solid transparent;
+
+$blue : blue;
+$orange: orange;
+$red : red;
+$green : green;
+
+$radius : 50%;
+//container padding
+$padding-container : 50px;
+//root padding and margin
+$padding : 0;
+$margin : 0;
+$box-sizing : border-box;
+
+//grid
+$gridTcolumns : repeat(auto-fit, minmax(250px, 1fr)); 
+$gridTrows : repeat(3, 1fr);
+$place-items: center;
+$gap : 50px;
+
+$display : grid;
+
